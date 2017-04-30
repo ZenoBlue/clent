@@ -1,0 +1,10 @@
+C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\bin\Debug\MessageClient.exe.config
+C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\bin\Debug\MessageClient.exe
+C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\bin\Debug\MessageClient.pdb
+C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\MessageClient.csprojResolveAssemblyReference.cache
+C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\MessageClient.MessageClient.resources
+C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\MessageClient.Properties.Resources.resources
+C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\MessageClient.csproj.GenerateResource.Cache
+C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\MessageClient.exe
+C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\MessageClient.pdb
+C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\MessageClient.login.resources
