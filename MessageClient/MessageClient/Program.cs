@@ -16,8 +16,8 @@ namespace MessageClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new MessageClient());
-           // Application.Run(new login());
+            // Application.Run(new MessageClient());
+            Application.Run(new login());
         }
     }
 }

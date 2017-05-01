@@ -43,7 +43,7 @@
             // 
             this.login_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.login_btn.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.login_btn.Location = new System.Drawing.Point(44, 97);
+            this.login_btn.Location = new System.Drawing.Point(44, 118);
             this.login_btn.Name = "login_btn";
             this.login_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.login_btn.Size = new System.Drawing.Size(161, 42);
@@ -55,7 +55,7 @@
             // login_name
             // 
             this.login_name.BackColor = System.Drawing.SystemColors.Menu;
-            this.login_name.Location = new System.Drawing.Point(76, 31);
+            this.login_name.Location = new System.Drawing.Point(76, 41);
             this.login_name.Name = "login_name";
             this.login_name.Size = new System.Drawing.Size(148, 21);
             this.login_name.TabIndex = 1;
@@ -63,7 +63,7 @@
             // login_pwd
             // 
             this.login_pwd.BackColor = System.Drawing.SystemColors.Menu;
-            this.login_pwd.Location = new System.Drawing.Point(76, 65);
+            this.login_pwd.Location = new System.Drawing.Point(76, 77);
             this.login_pwd.Name = "login_pwd";
             this.login_pwd.PasswordChar = '*';
             this.login_pwd.Size = new System.Drawing.Size(148, 21);
@@ -72,8 +72,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(15, 33);
+            this.label1.Location = new System.Drawing.Point(15, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 17);
             this.label1.TabIndex = 3;
@@ -81,8 +82,9 @@
             // 
             // label2
             // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(22, 66);
+            this.label2.Location = new System.Drawing.Point(22, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 21);
             this.label2.TabIndex = 4;
@@ -91,6 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(9, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 12);
@@ -100,6 +103,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(173, 309);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
@@ -108,15 +112,15 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageKey = "(无)";
-            this.button1.Location = new System.Drawing.Point(204, -1);
+            this.button1.Location = new System.Drawing.Point(76, 195);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 30);
+            this.button1.Size = new System.Drawing.Size(92, 44);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -127,7 +131,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(238, 330);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(243, 330);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MessageClient
 {
     public partial class MessageClient : Form
     {
         Client client;    // 客户端实例
-        public UInt16 str;
         public MessageClient()
         {
             InitializeComponent();
