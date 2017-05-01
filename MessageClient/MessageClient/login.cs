@@ -21,26 +21,31 @@ namespace MessageClient
             string constr = "server=localhost;User Id=root;password=;Database=info";
             MySqlConnection mycon = new MySqlConnection(constr);
             mycon.Open();
-            MySqlCommand mycmd = new MySqlCommand("select * from login_schema where usr_Name='"+this.login_name.Text+"'", mycon);
-            MySqlDataReader reader =mycmd.ExecuteReader();
-            if (reader.HasRows) 
+            if (!(this.login_name.Text != "") || !(this.login_pwd.Text != "")) //检查是为空的情况
             {
-                while (reader.Read())
+                MessageBox.Show("用户名和密码都不为空！");
+            }
+            else   //不为空的情况
+            {  
+                MySqlCommand mycmd = new MySqlCommand("select * from login_schema where usr_Name='" + this.login_name.Text + "'", mycon);
+                MySqlDataReader reader = mycmd.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    if (string.Equals(this.login_name.Text, reader[0].ToString())&string.Equals(this.login_pwd.Text, reader[1].ToString()))
+                    while (reader.Read())
                     {
-                        this.Hide();
-                        MessageClient messageclient = new MessageClient();//跳转窗体
-                        messageclient.Show();
-                    }
-                    else 
+                        if (!string.Equals(this.login_name.Text, reader[0].ToString()) ||!string.Equals(this.login_pwd.Text, reader[1].ToString()))
                         {
-                        MessageBox.Show("请核对您的用户名或密码！");
+                            MessageBox.Show("请核对您的用户名或密码！");
                         }
-
+                        else
+                        {
+                            this.Hide();
+                            MessageClient messageclient = new MessageClient();//跳转窗体
+                            messageclient.Show();
+                        }
+                    }
                 }
-             
-            }   
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
