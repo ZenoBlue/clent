@@ -22,23 +22,30 @@ namespace MessageClient
             MySqlConnection mycon = new MySqlConnection(constr);
             mycon.Open();
             MySqlCommand mycmd = new MySqlCommand("select * from login_schema where usr_Name='"+this.login_name.Text+"'", mycon);
-            MySqlDataReader reader = null;
-            reader =mycmd.ExecuteReader();
+            MySqlDataReader reader =mycmd.ExecuteReader();
             if (reader.HasRows) 
             {
-                MessageBox.Show("有数据");
                 while (reader.Read())
                 {
-                    this.label3.Text = reader[0].ToString()+reader[1].ToString();
+                    if (string.Equals(this.login_name.Text, reader[0].ToString())&string.Equals(this.login_pwd.Text, reader[1].ToString()))
+                    {
+                        this.Hide();
+                        MessageClient messageclient = new MessageClient();//跳转窗体
+                        messageclient.Show();
+                    }
+                    else 
+                        {
+                        MessageBox.Show("请核对您的用户名或密码！");
+                        }
+
                 }
-                // this.Hide();   //隐藏窗口
-                //MessageClient messageclient = new MessageClient();//跳转窗体
-                //  messageclient.Show();
              
-            }
-          //  this.label3.Text = db.getmysqlread("select * from login_schema where usr_Name like" + login_name.Text).ToString();
-          
+            }   
         }
 
-}
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }

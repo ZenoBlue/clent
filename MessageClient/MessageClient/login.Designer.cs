@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.login_btn = new System.Windows.Forms.Button();
             this.login_name = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.login_pwd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,13 +60,14 @@
             this.login_name.Size = new System.Drawing.Size(148, 21);
             this.login_name.TabIndex = 1;
             // 
-            // textBox2
+            // login_pwd
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.Location = new System.Drawing.Point(78, 65);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 21);
-            this.textBox2.TabIndex = 2;
+            this.login_pwd.BackColor = System.Drawing.SystemColors.Menu;
+            this.login_pwd.Location = new System.Drawing.Point(78, 65);
+            this.login_pwd.Name = "login_pwd";
+            this.login_pwd.PasswordChar = '*';
+            this.login_pwd.Size = new System.Drawing.Size(148, 21);
+            this.login_pwd.TabIndex = 2;
             // 
             // label1
             // 
@@ -116,6 +117,7 @@
             this.button1.Size = new System.Drawing.Size(34, 30);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // login
             // 
@@ -128,7 +130,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.login_pwd);
             this.Controls.Add(this.login_name);
             this.Controls.Add(this.login_btn);
             this.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -147,7 +149,7 @@
 
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.TextBox login_name;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox login_pwd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
