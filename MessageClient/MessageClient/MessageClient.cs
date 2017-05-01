@@ -13,7 +13,7 @@ namespace MessageClient
     public partial class MessageClient : Form
     {
         Client client;    // 客户端实例
-
+        public UInt16 str;
         public MessageClient()
         {
             InitializeComponent();
@@ -25,7 +25,8 @@ namespace MessageClient
             if (client == null)
                 client = new Client(ClientPrint, textBox_Ip.Text, textBox_Port.Text);
             if (!client.connected) client.start();
-            if (client != null) this.Text = "客户端 " + client.localIpPort;
+            if (client != null)
+                this.Text = "客户端 " + client.localIpPort;
         }
 
         // 客户端输出信息
@@ -44,6 +45,10 @@ namespace MessageClient
                     textBox_showing.AppendText(info);
                     textBox_showing.AppendText(Environment.NewLine);
                     textBox_showing.ScrollToCaret();
+                   
+                    //str = Convert.ToUInt16(info);
+                    //this.chart1.DataSource = str;
+                    //this.chart1.DataBind();
                 }
             }
         }
