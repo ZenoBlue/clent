@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button_connect = new System.Windows.Forms.Button();
             this.textBox_send = new System.Windows.Forms.TextBox();
             this.button_send = new System.Windows.Forms.Button();
@@ -38,14 +41,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.aGauge2 = new AGaugeApp.AGauge();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.aGauge2 = new AGaugeApp.AGauge();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupbox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_connect
@@ -151,12 +157,44 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.groupBox1.Controls.Add(this.chart1);
             this.groupBox1.Location = new System.Drawing.Point(182, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(504, 251);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "压力显示";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.aGauge2);
+            this.groupBox2.Location = new System.Drawing.Point(6, 133);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(170, 130);
+            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "温湿度显示";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBox_showing);
+            this.groupBox5.Location = new System.Drawing.Point(6, 349);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(299, 98);
+            this.groupBox5.TabIndex = 22;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "数据校验";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.button_send);
+            this.groupBox6.Controls.Add(this.textBox_send);
+            this.groupBox6.Location = new System.Drawing.Point(334, 349);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(352, 98);
+            this.groupBox6.TabIndex = 23;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "发送数据";
             // 
             // aGauge2
             // 
@@ -264,36 +302,21 @@
             this.aGauge2.Text = "aGauge2";
             this.aGauge2.Value = 22F;
             // 
-            // groupBox2
+            // chart1
             // 
-            this.groupBox2.Controls.Add(this.aGauge2);
-            this.groupBox2.Location = new System.Drawing.Point(6, 133);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(170, 130);
-            this.groupBox2.TabIndex = 19;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "温湿度显示";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBox_showing);
-            this.groupBox5.Location = new System.Drawing.Point(6, 349);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(299, 98);
-            this.groupBox5.TabIndex = 22;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "数据校验";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.button_send);
-            this.groupBox6.Controls.Add(this.textBox_send);
-            this.groupBox6.Location = new System.Drawing.Point(334, 349);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(352, 98);
-            this.groupBox6.TabIndex = 23;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "发送数据";
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(31, 30);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(351, 155);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
             // MessageClient
             // 
@@ -312,10 +335,12 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MessageClient_FormClosed);
             this.groupbox.ResumeLayout(false);
             this.groupbox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,6 +362,7 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private AGaugeApp.AGauge aGauge1;
         private AGaugeApp.AGauge aGauge2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
