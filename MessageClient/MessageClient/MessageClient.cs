@@ -20,13 +20,27 @@ namespace MessageClient
         }
 
         // 连接服务器
+        public bool flag = true;
         private void button_connect_Click(object sender, EventArgs e)
         {
-            if (client == null)
-                client = new Client(ClientPrint, textBox_Ip.Text, textBox_Port.Text);
-            if (!client.connected) client.start();
-            if (client != null)
-                this.Text = "客户端 " + client.localIpPort;
+            
+           
+            if (flag)
+            {
+                if (client == null)
+                    client = new Client(ClientPrint, textBox_Ip.Text, textBox_Port.Text);
+                if (!client.connected) client.start();
+                if (client != null)
+                    this.Text = "客户端 " + client.localIpPort;
+                this.button_connect.Text = "关闭";
+                flag = false;
+            }
+            else
+            {
+                this.button_connect.Text = "连接服务器";
+                client.close();
+                flag = true;
+            }
         }
 
         // 客户端输出信息

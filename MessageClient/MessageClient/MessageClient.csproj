@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AGauge.designer.cs">
+      <DependentUpon>AGauge.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="login.cs">

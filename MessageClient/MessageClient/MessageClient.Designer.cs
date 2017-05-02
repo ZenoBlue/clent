@@ -35,14 +35,11 @@
             this.textBox_Port = new System.Windows.Forms.TextBox();
             this.textBox_showing = new System.Windows.Forms.RichTextBox();
             this.groupbox = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.aGauge2 = new AGaugeApp.AGauge();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupbox.SuspendLayout();
@@ -53,9 +50,9 @@
             // 
             // button_connect
             // 
-            this.button_connect.Location = new System.Drawing.Point(8, 74);
+            this.button_connect.Location = new System.Drawing.Point(68, 74);
             this.button_connect.Name = "button_connect";
-            this.button_connect.Size = new System.Drawing.Size(75, 23);
+            this.button_connect.Size = new System.Drawing.Size(83, 23);
             this.button_connect.TabIndex = 11;
             this.button_connect.Text = "连接服务器";
             this.button_connect.UseVisualStyleBackColor = true;
@@ -91,9 +88,9 @@
             this.textBox_Ip.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBox_Ip.Location = new System.Drawing.Point(55, 20);
             this.textBox_Ip.Name = "textBox_Ip";
-            this.textBox_Ip.Size = new System.Drawing.Size(111, 21);
+            this.textBox_Ip.Size = new System.Drawing.Size(96, 21);
             this.textBox_Ip.TabIndex = 1;
-            this.textBox_Ip.Text = "127.0.0.1";
+            this.textBox_Ip.Text = "192.168.191.1";
             // 
             // textBox_Port
             // 
@@ -121,7 +118,6 @@
             // groupbox
             // 
             this.groupbox.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.groupbox.Controls.Add(this.button1);
             this.groupbox.Controls.Add(this.label2);
             this.groupbox.Controls.Add(this.label1);
             this.groupbox.Controls.Add(this.button_connect);
@@ -133,16 +129,6 @@
             this.groupbox.TabIndex = 17;
             this.groupbox.TabStop = false;
             this.groupbox.Text = "连接";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(89, 74);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "close";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -167,48 +153,126 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.groupBox1.Location = new System.Drawing.Point(182, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(507, 201);
+            this.groupBox1.Size = new System.Drawing.Size(504, 251);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "压力显示";
             // 
+            // aGauge2
+            // 
+            this.aGauge2.BaseArcColor = System.Drawing.Color.Gray;
+            this.aGauge2.BaseArcRadius = 500;
+            this.aGauge2.BaseArcStart = 180;
+            this.aGauge2.BaseArcSweep = 90;
+            this.aGauge2.BaseArcWidth = 0;
+            this.aGauge2.Cap_Idx = ((byte)(1));
+            this.aGauge2.CapColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Black};
+            this.aGauge2.CapPosition = new System.Drawing.Point(10, 10);
+            this.aGauge2.CapsPosition = new System.Drawing.Point[] {
+        new System.Drawing.Point(10, 10),
+        new System.Drawing.Point(10, 10),
+        new System.Drawing.Point(10, 10),
+        new System.Drawing.Point(10, 10),
+        new System.Drawing.Point(10, 10)};
+            this.aGauge2.CapsText = new string[] {
+        "",
+        "",
+        "",
+        "",
+        ""};
+            this.aGauge2.CapText = "";
+            this.aGauge2.Center = new System.Drawing.Point(70, 70);
+            this.aGauge2.Location = new System.Drawing.Point(72, 43);
+            this.aGauge2.MaxValue = 60F;
+            this.aGauge2.MinValue = 0F;
+            this.aGauge2.Name = "aGauge2";
+            this.aGauge2.NeedleColor1 = AGaugeApp.AGauge.NeedleColorEnum.Blue;
+            this.aGauge2.NeedleColor2 = System.Drawing.Color.RoyalBlue;
+            this.aGauge2.NeedleRadius = 50;
+            this.aGauge2.NeedleType = 1;
+            this.aGauge2.NeedleWidth = 3;
+            this.aGauge2.Range_Idx = ((byte)(0));
+            this.aGauge2.RangeColor = System.Drawing.Color.LightGreen;
+            this.aGauge2.RangeEnabled = false;
+            this.aGauge2.RangeEndValue = 300F;
+            this.aGauge2.RangeInnerRadius = 70;
+            this.aGauge2.RangeOuterRadius = 80;
+            this.aGauge2.RangesColor = new System.Drawing.Color[] {
+        System.Drawing.Color.LightGreen,
+        System.Drawing.Color.Red,
+        System.Drawing.SystemColors.Control,
+        System.Drawing.SystemColors.Control,
+        System.Drawing.SystemColors.Control};
+            this.aGauge2.RangesEnabled = new bool[] {
+        false,
+        false,
+        false,
+        false,
+        false};
+            this.aGauge2.RangesEndValue = new float[] {
+        300F,
+        400F,
+        0F,
+        0F,
+        0F};
+            this.aGauge2.RangesInnerRadius = new int[] {
+        70,
+        10,
+        70,
+        70,
+        70};
+            this.aGauge2.RangesOuterRadius = new int[] {
+        80,
+        40,
+        80,
+        80,
+        80};
+            this.aGauge2.RangesStartValue = new float[] {
+        -100F,
+        300F,
+        0F,
+        0F,
+        0F};
+            this.aGauge2.RangeStartValue = -100F;
+            this.aGauge2.ScaleLinesInterColor = System.Drawing.Color.RosyBrown;
+            this.aGauge2.ScaleLinesInterInnerRadius = 42;
+            this.aGauge2.ScaleLinesInterOuterRadius = 55;
+            this.aGauge2.ScaleLinesInterWidth = 1;
+            this.aGauge2.ScaleLinesMajorColor = System.Drawing.Color.Gray;
+            this.aGauge2.ScaleLinesMajorInnerRadius = 40;
+            this.aGauge2.ScaleLinesMajorOuterRadius = 55;
+            this.aGauge2.ScaleLinesMajorStepValue = 10F;
+            this.aGauge2.ScaleLinesMajorWidth = 2;
+            this.aGauge2.ScaleLinesMinorColor = System.Drawing.Color.Gray;
+            this.aGauge2.ScaleLinesMinorInnerRadius = 43;
+            this.aGauge2.ScaleLinesMinorNumOf = 1;
+            this.aGauge2.ScaleLinesMinorOuterRadius = 50;
+            this.aGauge2.ScaleLinesMinorWidth = 1;
+            this.aGauge2.ScaleNumbersColor = System.Drawing.Color.Black;
+            this.aGauge2.ScaleNumbersFormat = null;
+            this.aGauge2.ScaleNumbersRadius = 62;
+            this.aGauge2.ScaleNumbersRotation = 90;
+            this.aGauge2.ScaleNumbersStartScaleLine = 1;
+            this.aGauge2.ScaleNumbersStepScaleLines = 2;
+            this.aGauge2.Size = new System.Drawing.Size(92, 85);
+            this.aGauge2.TabIndex = 12;
+            this.aGauge2.Text = "aGauge2";
+            this.aGauge2.Value = 22F;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.progressBar1);
+            this.groupBox2.Controls.Add(this.aGauge2);
             this.groupBox2.Location = new System.Drawing.Point(6, 133);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(170, 79);
+            this.groupBox2.Size = new System.Drawing.Size(170, 130);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "温湿度显示";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(9, 20);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(119, 15);
-            this.progressBar1.TabIndex = 0;
-            this.progressBar1.Value = 30;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.groupBox3.Location = new System.Drawing.Point(6, 219);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(681, 55);
-            this.groupBox3.TabIndex = 20;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "陀螺仪各项指标";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.groupBox4.Location = new System.Drawing.Point(6, 280);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(680, 63);
-            this.groupBox4.TabIndex = 21;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "预警状态";
             // 
             // groupBox5
             // 
@@ -239,8 +303,6 @@
             this.ClientSize = new System.Drawing.Size(707, 474);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupbox);
@@ -271,12 +333,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button1;
+        private AGaugeApp.AGauge aGauge1;
+        private AGaugeApp.AGauge aGauge2;
     }
 }
 
