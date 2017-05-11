@@ -41,17 +41,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.aGauge2 = new AGaugeApp.AGauge();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.aGauge2 = new AGaugeApp.AGauge();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupbox.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_connect
@@ -165,6 +165,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "压力显示";
             // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(6, 20);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(351, 155);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.aGauge2);
@@ -174,27 +191,6 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "温湿度显示";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBox_showing);
-            this.groupBox5.Location = new System.Drawing.Point(6, 349);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(299, 98);
-            this.groupBox5.TabIndex = 22;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "数据校验";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.button_send);
-            this.groupBox6.Controls.Add(this.textBox_send);
-            this.groupBox6.Location = new System.Drawing.Point(334, 349);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(352, 98);
-            this.groupBox6.TabIndex = 23;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "发送数据";
             // 
             // aGauge2
             // 
@@ -302,21 +298,26 @@
             this.aGauge2.Text = "aGauge2";
             this.aGauge2.Value = 22F;
             // 
-            // chart1
+            // groupBox5
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(31, 30);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(351, 155);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.groupBox5.Controls.Add(this.textBox_showing);
+            this.groupBox5.Location = new System.Drawing.Point(6, 349);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(299, 98);
+            this.groupBox5.TabIndex = 22;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "数据校验";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.button_send);
+            this.groupBox6.Controls.Add(this.textBox_send);
+            this.groupBox6.Location = new System.Drawing.Point(334, 349);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(352, 98);
+            this.groupBox6.TabIndex = 23;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "发送数据";
             // 
             // MessageClient
             // 
@@ -336,11 +337,11 @@
             this.groupbox.ResumeLayout(false);
             this.groupbox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }

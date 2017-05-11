@@ -16,7 +16,12 @@ namespace MessageClient
         {
             InitializeComponent();
         }
-        private void login_btn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
             string constr = "server=localhost;User Id=root;password=;Database=info";
             MySqlConnection mycon = new MySqlConnection(constr);
@@ -26,14 +31,14 @@ namespace MessageClient
                 MessageBox.Show("用户名和密码都不为空！");
             }
             else   //不为空的情况
-            {  
+            {
                 MySqlCommand mycmd = new MySqlCommand("select * from login_schema where usr_Name='" + this.login_name.Text + "'", mycon);
                 MySqlDataReader reader = mycmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        if (!string.Equals(this.login_name.Text, reader[0].ToString()) ||!string.Equals(this.login_pwd.Text, reader[1].ToString()))
+                        if (!string.Equals(this.login_name.Text, reader[0].ToString()) || !string.Equals(this.login_pwd.Text, reader[1].ToString()))
                         {
                             MessageBox.Show("请核对您的用户名或密码！");
                         }
@@ -46,11 +51,6 @@ namespace MessageClient
                     }
                 }
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
