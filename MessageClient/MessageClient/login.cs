@@ -21,7 +21,7 @@ namespace MessageClient
             this.Close();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             string constr = "server=localhost;User Id=root;password=;Database=info";
             MySqlConnection mycon = new MySqlConnection(constr);
