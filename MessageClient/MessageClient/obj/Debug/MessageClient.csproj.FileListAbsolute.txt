@@ -8,7 +8,6 @@ C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\Messag
 C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\MessageClient.exe
 C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\MessageClient.pdb
 C:\Users\Zeno\Desktop\MessageServer\MessageClient\MessageClient\obj\Debug\MessageClient.login.resources
-D:\client\MessageClient\MessageClient\obj\Debug\MessageClient.csprojResolveAssemblyReference.cache
 D:\client\MessageClient\MessageClient\obj\Debug\MessageClient.login.resources
 D:\client\MessageClient\MessageClient\obj\Debug\MessageClient.MessageClient.resources
 D:\client\MessageClient\MessageClient\obj\Debug\MessageClient.Properties.Resources.resources
@@ -18,3 +17,5 @@ D:\client\MessageClient\MessageClient\obj\Debug\MessageClient.pdb
 D:\client\MessageClient\MessageClient\bin\Debug\MessageClient.exe.config
 D:\client\MessageClient\MessageClient\bin\Debug\MessageClient.exe
 D:\client\MessageClient\MessageClient\bin\Debug\MessageClient.pdb
+D:\client\MessageClient\MessageClient\obj\Debug\MessageClient.show.resources
+D:\client\MessageClient\MessageClient\obj\Debug\MessageClient.csprojResolveAssemblyReference.cache
