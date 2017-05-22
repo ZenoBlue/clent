@@ -18,7 +18,7 @@ namespace MessageClient
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new MessageClient());
             Application.Run(new login());
-           // Application.Run(new show());
+           //Application.Run(new show());
         }
     }
 }

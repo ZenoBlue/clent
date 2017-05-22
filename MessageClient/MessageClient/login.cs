@@ -28,8 +28,6 @@ namespace MessageClient
             string constr = "server=123.207.28.55;uid=admin;PWD=admin;Database=factory_db";
             MySqlConnection mycon = new MySql.Data.MySqlClient.MySqlConnection(constr);
             mycon.Open();
-            //MySqlConnection mycon = new MySqlConnection(constr);
-            //mycon.Open();
             if (!(this.login_name.Text != "")) //检查是为空的情况
             {
                 MessageBox.Show("用户名不允许为空！");
@@ -60,6 +58,7 @@ namespace MessageClient
                     }
                 }
             }
+            mycon.Close();
         }
 
         private void login_KeyDown(object sender, KeyEventArgs e)
