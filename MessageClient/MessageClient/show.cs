@@ -13,50 +13,96 @@ namespace MessageClient
 {
     public partial class show : Form
     {
+        Client client;//实例化
         public show()
         {
             InitializeComponent();
-            this.timer1.Start();
             this.timer2.Start();
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            show_text();
-        }
+        private string ID = "";
+        private int res1, res2 ,res= 0;
         public void getusr_id(string id)
         {
             this.lbl_usr.Text = id;
         }
-        private void show_text()
+        private void ClientPrint(string info)
         {
-            string constr = "server=123.207.28.55;uid=admin;PWD=admin;Database=factory_db";
-            MySqlConnection mycon = new MySql.Data.MySqlClient.MySqlConnection(constr);
-            mycon.Open();
-            MySqlCommand mycmd = new MySqlCommand("select W_info,S_info,Y_info,D_info,roll_info,pitch_info,yaw_info from manipulator_table where TIME=(select max(TIME) from manipulator_table)", mycon);
-            MySqlDataReader reader = mycmd.ExecuteReader();
-
-            while (reader.Read())
+            string str = info;
+           
+            if (textBox_showing.InvokeRequired)
             {
-                lb_W.Text =(Convert.ToInt32(reader[0])/10).ToString();
-                lb_S.Text =(Convert.ToInt32(reader[1])/10).ToString();
-                lb_Y.Text =(Convert.ToInt32(reader[2])/10).ToString();
-                lb_D.Text =(Convert.ToInt32(reader[3])/10).ToString();
-                lbx.Text = (Convert.ToInt32(reader[4]) /10).ToString()+"."+(Convert.ToInt32(reader[4])%10).ToString();
-                lby.Text = (Convert.ToInt32(reader[5]) / 10).ToString()+"."+(Convert.ToInt32(reader[5]) % 10).ToString();
-                lbz.Text = (Convert.ToInt32(reader[6]) / 10).ToString()+"."+(Convert.ToInt32(reader[6]) %10).ToString();
+                Client.Print F = new Client.Print(ClientPrint);
+                this.Invoke(F, new object[] { info });
             }
-            mycon.Close();
+            else
+            {
+                if (info != null)
+                {
+                    textBox_showing.AppendText(info);
+                    textBox_showing.AppendText(Environment.NewLine);
+                    textBox_showing.ScrollToCaret();
+                    if (check(info))                       //符合协议格式
+                    {
+                        string result = str.Substring(res1, res);
+                        string[] resultArry = result.Split('&'); //取出协议数据
+                        showMessage(resultArry);
+                    }
+                }
+            }
         }
-        private void show_Load(object sender, EventArgs e)
+        private void show_Load(object sender, EventArgs e)   //窗口加载连接tcp
         {
-            timer1.Interval = 500;
+            if (client == null)
+                client = new Client(ClientPrint, "111.230.139.167", "8899");
+            if (!client.connected)
+            {
+                client.start();
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             this.lal_date.Text = System.DateTime.Now.ToString();
         }
+        private void get_ID(string str)
+        {
+            this.ID = str;
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            client.Send("@zeno@");
+        }
+
+        private void show_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (client != null && client.connected)
+                client.stop();
+        }
+        public bool check(string str)
+        {
+             res1 = str.IndexOf("$-") + 2;// 协议头
+             res2 = str.IndexOf("-$");//协议尾
+             res = res2 - res1;          //协议长
+            if (res > 0)
+                return true;
+            else
+                return false;
+        }
+        public void showMessage(string []reArry)
+        {
+            for (int i = 1; i < 8; i++)
+            {
+                reArry[i] = (Convert.ToInt32(reArry[i]) / 10).ToString() + "." + (Convert.ToInt32(reArry[i]) % 10).ToString();
+            }
+                lb_W.Text = reArry[1];
+                lb_S.Text = reArry[2];
+                lb_Y.Text = reArry[3];
+                lb_D.Text = reArry[4];
+                lbx.Text = reArry[5];
+                lby.Text = reArry[6];
+                lbz.Text = reArry[7];
+
+        }
     }
 }
