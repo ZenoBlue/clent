@@ -76,6 +76,7 @@ namespace MessageClient
         public void stop()
         {
             connected = false;
+            socket.Close();
         }
 
         /// <summary>
@@ -119,7 +120,6 @@ namespace MessageClient
                     String data = Receive(ortherSocket);       // 接收客户端发送的信息
                     if (!data.Equals(""))
                     {
-                        //if (print != null) print("服务器" + ortherSocket.RemoteEndPoint.ToString() + "信息：\r\n" + data);
                         if (print != null)
                             print(data);
                     }
@@ -127,8 +127,8 @@ namespace MessageClient
                 catch (Exception ex)
                 {
                     if (print != null) print("连接已自动断开，" + ex.Message);
-                    ortherSocket.Shutdown(SocketShutdown.Both);
-                    ortherSocket.Close();
+                    //ortherSocket.Shutdown(SocketShutdown.Both);
+                    //ortherSocket.Close();
                     connected = false;
                     break;
                 }

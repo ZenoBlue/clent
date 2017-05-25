@@ -57,7 +57,6 @@
             this.lbz = new System.Windows.Forms.Label();
             this.lby = new System.Windows.Forms.Label();
             this.textBox_showing = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_W)).BeginInit();
@@ -372,23 +371,12 @@
             this.textBox_showing.Size = new System.Drawing.Size(228, 394);
             this.textBox_showing.TabIndex = 24;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(457, 374);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // show
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
             this.ClientSize = new System.Drawing.Size(858, 566);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox_showing);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
@@ -417,7 +405,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Name = "show";
             this.Text = "show";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.show_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.show_FormClosing);
             this.Load += new System.EventHandler(this.show_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -460,6 +448,5 @@
         private System.Windows.Forms.Label lbz;
         private System.Windows.Forms.Label lby;
         private System.Windows.Forms.TextBox textBox_showing;
-        private System.Windows.Forms.Button button1;
     }
 }

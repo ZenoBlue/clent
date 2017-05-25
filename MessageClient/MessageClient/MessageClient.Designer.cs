@@ -36,11 +36,17 @@ namespace MessageClient
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageClient));
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.roundButton1 = new RoundButton.RoundButton();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.roundButton3 = new RoundButton.RoundButton();
+            this.roundButton2 = new RoundButton.RoundButton();
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.roundButton4 = new RoundButton.RoundButton();
             this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
+            this.roundButton5 = new RoundButton.RoundButton();
             this.toolTip6 = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_show = new RoundButton.RoundButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_usr = new System.Windows.Forms.Label();
@@ -55,12 +61,6 @@ namespace MessageClient
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_show = new RoundButton.RoundButton();
-            this.roundButton5 = new RoundButton.RoundButton();
-            this.roundButton4 = new RoundButton.RoundButton();
-            this.roundButton3 = new RoundButton.RoundButton();
-            this.roundButton2 = new RoundButton.RoundButton();
-            this.roundButton1 = new RoundButton.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -79,6 +79,116 @@ namespace MessageClient
             this.label1.Size = new System.Drawing.Size(196, 21);
             this.label1.TabIndex = 6;
             this.label1.Text = "©Copyright韩山师范学院";
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
+            this.roundButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton1.BackgroundImage")));
+            this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.roundButton1.Diameter = 69;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.roundButton1.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton1.ImageEnter")));
+            this.roundButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton1.ImageNormal")));
+            this.roundButton1.Location = new System.Drawing.Point(351, 88);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Size = new System.Drawing.Size(69, 69);
+            this.roundButton1.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.roundButton1, "温度");
+            this.roundButton1.UseVisualStyleBackColor = false;
+            // 
+            // roundButton3
+            // 
+            this.roundButton3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.roundButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
+            this.roundButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton3.BackgroundImage")));
+            this.roundButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.roundButton3.Diameter = 68;
+            this.roundButton3.FlatAppearance.BorderSize = 0;
+            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton3.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton3.ImageEnter")));
+            this.roundButton3.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton3.ImageNormal")));
+            this.roundButton3.Location = new System.Drawing.Point(496, 184);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.Size = new System.Drawing.Size(68, 68);
+            this.roundButton3.TabIndex = 9;
+            this.toolTip2.SetToolTip(this.roundButton3, "湿度");
+            this.roundButton3.UseVisualStyleBackColor = false;
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
+            this.roundButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton2.BackgroundImage")));
+            this.roundButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundButton2.Diameter = 64;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton2.ImageEnter")));
+            this.roundButton2.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton2.ImageNormal")));
+            this.roundButton2.Location = new System.Drawing.Point(212, 187);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.Size = new System.Drawing.Size(64, 64);
+            this.roundButton2.TabIndex = 8;
+            this.toolTip2.SetToolTip(this.roundButton2, "压力");
+            this.roundButton2.UseVisualStyleBackColor = false;
+            // 
+            // roundButton4
+            // 
+            this.roundButton4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.roundButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
+            this.roundButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton4.BackgroundImage")));
+            this.roundButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundButton4.Diameter = 67;
+            this.roundButton4.FlatAppearance.BorderSize = 0;
+            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton4.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton4.ImageEnter")));
+            this.roundButton4.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton4.ImageNormal")));
+            this.roundButton4.Location = new System.Drawing.Point(271, 363);
+            this.roundButton4.Name = "roundButton4";
+            this.roundButton4.Size = new System.Drawing.Size(67, 67);
+            this.roundButton4.TabIndex = 10;
+            this.toolTip4.SetToolTip(this.roundButton4, "陀螺仪");
+            this.roundButton4.UseVisualStyleBackColor = false;
+            // 
+            // roundButton5
+            // 
+            this.roundButton5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.roundButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
+            this.roundButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton5.BackgroundImage")));
+            this.roundButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundButton5.Diameter = 68;
+            this.roundButton5.FlatAppearance.BorderSize = 0;
+            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton5.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton5.ImageEnter")));
+            this.roundButton5.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton5.ImageNormal")));
+            this.roundButton5.Location = new System.Drawing.Point(472, 351);
+            this.roundButton5.Name = "roundButton5";
+            this.roundButton5.Size = new System.Drawing.Size(68, 68);
+            this.roundButton5.TabIndex = 11;
+            this.toolTip5.SetToolTip(this.roundButton5, "电流");
+            this.roundButton5.UseVisualStyleBackColor = false;
+            // 
+            // btn_show
+            // 
+            this.btn_show.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
+            this.btn_show.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_show.BackgroundImage")));
+            this.btn_show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_show.Diameter = 229;
+            this.btn_show.FlatAppearance.BorderSize = 0;
+            this.btn_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_show.ImageEnter = ((System.Drawing.Image)(resources.GetObject("btn_show.ImageEnter")));
+            this.btn_show.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_show.ImageNormal")));
+            this.btn_show.Location = new System.Drawing.Point(272, 158);
+            this.btn_show.Name = "btn_show";
+            this.btn_show.Size = new System.Drawing.Size(229, 229);
+            this.btn_show.TabIndex = 12;
+            this.toolTip6.SetToolTip(this.btn_show, "实时显示");
+            this.btn_show.UseVisualStyleBackColor = false;
+            this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
             // 
             // pictureBox2
             // 
@@ -183,6 +293,7 @@ namespace MessageClient
             this.radioButton2.TabIndex = 18;
             this.radioButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -260,116 +371,6 @@ namespace MessageClient
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_show
-            // 
-            this.btn_show.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
-            this.btn_show.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_show.BackgroundImage")));
-            this.btn_show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_show.Diameter = 229;
-            this.btn_show.FlatAppearance.BorderSize = 0;
-            this.btn_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_show.ImageEnter = ((System.Drawing.Image)(resources.GetObject("btn_show.ImageEnter")));
-            this.btn_show.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_show.ImageNormal")));
-            this.btn_show.Location = new System.Drawing.Point(272, 158);
-            this.btn_show.Name = "btn_show";
-            this.btn_show.Size = new System.Drawing.Size(229, 229);
-            this.btn_show.TabIndex = 12;
-            this.toolTip6.SetToolTip(this.btn_show, "实时显示");
-            this.btn_show.UseVisualStyleBackColor = false;
-            this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
-            // 
-            // roundButton5
-            // 
-            this.roundButton5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.roundButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
-            this.roundButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton5.BackgroundImage")));
-            this.roundButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundButton5.Diameter = 68;
-            this.roundButton5.FlatAppearance.BorderSize = 0;
-            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton5.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton5.ImageEnter")));
-            this.roundButton5.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton5.ImageNormal")));
-            this.roundButton5.Location = new System.Drawing.Point(472, 351);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.Size = new System.Drawing.Size(68, 68);
-            this.roundButton5.TabIndex = 11;
-            this.toolTip5.SetToolTip(this.roundButton5, "电流");
-            this.roundButton5.UseVisualStyleBackColor = false;
-            // 
-            // roundButton4
-            // 
-            this.roundButton4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.roundButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
-            this.roundButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton4.BackgroundImage")));
-            this.roundButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundButton4.Diameter = 67;
-            this.roundButton4.FlatAppearance.BorderSize = 0;
-            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton4.ImageEnter")));
-            this.roundButton4.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton4.ImageNormal")));
-            this.roundButton4.Location = new System.Drawing.Point(271, 363);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.Size = new System.Drawing.Size(67, 67);
-            this.roundButton4.TabIndex = 10;
-            this.toolTip4.SetToolTip(this.roundButton4, "陀螺仪");
-            this.roundButton4.UseVisualStyleBackColor = false;
-            // 
-            // roundButton3
-            // 
-            this.roundButton3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.roundButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
-            this.roundButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton3.BackgroundImage")));
-            this.roundButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.roundButton3.Diameter = 68;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton3.ImageEnter")));
-            this.roundButton3.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton3.ImageNormal")));
-            this.roundButton3.Location = new System.Drawing.Point(496, 184);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.Size = new System.Drawing.Size(68, 68);
-            this.roundButton3.TabIndex = 9;
-            this.toolTip2.SetToolTip(this.roundButton3, "湿度");
-            this.roundButton3.UseVisualStyleBackColor = false;
-            // 
-            // roundButton2
-            // 
-            this.roundButton2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
-            this.roundButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton2.BackgroundImage")));
-            this.roundButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundButton2.Diameter = 64;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton2.ImageEnter")));
-            this.roundButton2.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton2.ImageNormal")));
-            this.roundButton2.Location = new System.Drawing.Point(212, 187);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Size = new System.Drawing.Size(64, 64);
-            this.roundButton2.TabIndex = 8;
-            this.toolTip2.SetToolTip(this.roundButton2, "压力");
-            this.roundButton2.UseVisualStyleBackColor = false;
-            // 
-            // roundButton1
-            // 
-            this.roundButton1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
-            this.roundButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("roundButton1.BackgroundImage")));
-            this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.roundButton1.Diameter = 69;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.roundButton1.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton1.ImageEnter")));
-            this.roundButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton1.ImageNormal")));
-            this.roundButton1.Location = new System.Drawing.Point(351, 88);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(69, 69);
-            this.roundButton1.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.roundButton1, "温度");
-            this.roundButton1.UseVisualStyleBackColor = false;
-            // 
             // MessageClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -396,6 +397,7 @@ namespace MessageClient
             this.Name = "MessageClient";
             this.Text = "客户端";
             this.Load += new System.EventHandler(this.MessageClient_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MessageClient_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -18,3 +18,4 @@ D:\client\MessageClient\MessageClient\bin\Debug\MessageClient.exe.config
 D:\client\MessageClient\MessageClient\bin\Debug\MessageClient.exe
 D:\client\MessageClient\MessageClient\bin\Debug\MessageClient.pdb
 D:\client\MessageClient\MessageClient\obj\Debug\MessageClient.show.resources
+D:\client\MessageClient\MessageClient\obj\Debug\MessageClient.csprojResolveAssemblyReference.cache

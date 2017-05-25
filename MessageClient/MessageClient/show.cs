@@ -21,31 +21,37 @@ namespace MessageClient
         }
         private string ID = "";
         private int res1, res2 ,res= 0;
-        public void getusr_id(string id)
+        public void getusr_info(string id)
         {
             this.lbl_usr.Text = id;
         }
         private void ClientPrint(string info)
         {
             string str = info;
-           
-            if (textBox_showing.InvokeRequired)
+            if (client.connected)
             {
-                Client.Print F = new Client.Print(ClientPrint);
-                this.Invoke(F, new object[] { info });
-            }
-            else
-            {
-                if (info != null)
+                if (textBox_showing.InvokeRequired)
                 {
-                    textBox_showing.AppendText(info);
-                    textBox_showing.AppendText(Environment.NewLine);
-                    textBox_showing.ScrollToCaret();
-                    if (check(info))                       //符合协议格式
+                    Client.Print F = new Client.Print(ClientPrint);
+                    this.Invoke(F, new object[] { info });
+                }
+                else
+                {
+                    if (info != null)
                     {
-                        string result = str.Substring(res1, res);
-                        string[] resultArry = result.Split('&'); //取出协议数据
-                        showMessage(resultArry);
+                        textBox_showing.AppendText(info);
+                        textBox_showing.AppendText(Environment.NewLine);
+                        textBox_showing.ScrollToCaret();
+                        if (check(info))                       //符合协议格式
+                        {
+                            string result = str.Substring(res1, res);
+                            string[] resultArry = result.Split('&'); //取出协议数据
+                            if (resultArry[0].Equals(ID))
+                            {
+                                showMessage(resultArry);
+                            }
+
+                        }
                     }
                 }
             }
@@ -57,6 +63,7 @@ namespace MessageClient
             if (!client.connected)
             {
                 client.start();
+                client.Send("@zeno@");
             }
         }
 
@@ -64,21 +71,19 @@ namespace MessageClient
         {
             this.lal_date.Text = System.DateTime.Now.ToString();
         }
-        private void get_ID(string str)
+        public void getmanipylator_ID(string str)
         {
             this.ID = str;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            client.Send("@zeno@");
-        }
-
-        private void show_FormClosed(object sender, FormClosedEventArgs e)
+        private void show_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (client != null && client.connected)
-                client.stop();
+                this.textBox_showing.Dispose();
+            client.stop();
+           
+            //System.Environment.Exit(0);
         }
+
         public bool check(string str)
         {
              res1 = str.IndexOf("$-") + 2;// 协议头
