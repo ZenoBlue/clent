@@ -1,4 +1,9 @@
-﻿using System.Diagnostics;
+﻿/// <summary>
+/// 六轴机器人远程故障与监测系统v1.0
+/// ©韩山师范学院
+/// provide by 赵亮(Zeno)
+/// </summary>
+using System.Diagnostics;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace MessageClient

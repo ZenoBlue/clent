@@ -1,4 +1,9 @@
-﻿using System;
+﻿/// <summary>
+/// 六轴机器人远程故障与监测系统v1.0
+/// ©韩山师范学院
+/// provide by 赵亮(Zeno)
+/// </summary>
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -61,6 +66,7 @@ namespace MessageClient
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -74,7 +80,7 @@ namespace MessageClient
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(650, 422);
+            this.label1.Location = new System.Drawing.Point(650, 447);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 21);
             this.label1.TabIndex = 6;
@@ -92,7 +98,7 @@ namespace MessageClient
             this.roundButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.roundButton1.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton1.ImageEnter")));
             this.roundButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton1.ImageNormal")));
-            this.roundButton1.Location = new System.Drawing.Point(351, 88);
+            this.roundButton1.Location = new System.Drawing.Point(351, 111);
             this.roundButton1.Name = "roundButton1";
             this.roundButton1.Size = new System.Drawing.Size(69, 69);
             this.roundButton1.TabIndex = 7;
@@ -110,7 +116,7 @@ namespace MessageClient
             this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton3.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton3.ImageEnter")));
             this.roundButton3.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton3.ImageNormal")));
-            this.roundButton3.Location = new System.Drawing.Point(496, 184);
+            this.roundButton3.Location = new System.Drawing.Point(496, 207);
             this.roundButton3.Name = "roundButton3";
             this.roundButton3.Size = new System.Drawing.Size(68, 68);
             this.roundButton3.TabIndex = 9;
@@ -128,7 +134,7 @@ namespace MessageClient
             this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton2.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton2.ImageEnter")));
             this.roundButton2.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton2.ImageNormal")));
-            this.roundButton2.Location = new System.Drawing.Point(212, 187);
+            this.roundButton2.Location = new System.Drawing.Point(212, 210);
             this.roundButton2.Name = "roundButton2";
             this.roundButton2.Size = new System.Drawing.Size(64, 64);
             this.roundButton2.TabIndex = 8;
@@ -146,7 +152,7 @@ namespace MessageClient
             this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton4.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton4.ImageEnter")));
             this.roundButton4.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton4.ImageNormal")));
-            this.roundButton4.Location = new System.Drawing.Point(271, 363);
+            this.roundButton4.Location = new System.Drawing.Point(271, 386);
             this.roundButton4.Name = "roundButton4";
             this.roundButton4.Size = new System.Drawing.Size(67, 67);
             this.roundButton4.TabIndex = 10;
@@ -164,7 +170,7 @@ namespace MessageClient
             this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton5.ImageEnter = ((System.Drawing.Image)(resources.GetObject("roundButton5.ImageEnter")));
             this.roundButton5.ImageNormal = ((System.Drawing.Image)(resources.GetObject("roundButton5.ImageNormal")));
-            this.roundButton5.Location = new System.Drawing.Point(472, 351);
+            this.roundButton5.Location = new System.Drawing.Point(472, 374);
             this.roundButton5.Name = "roundButton5";
             this.roundButton5.Size = new System.Drawing.Size(68, 68);
             this.roundButton5.TabIndex = 11;
@@ -182,7 +188,7 @@ namespace MessageClient
             this.btn_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_show.ImageEnter = ((System.Drawing.Image)(resources.GetObject("btn_show.ImageEnter")));
             this.btn_show.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_show.ImageNormal")));
-            this.btn_show.Location = new System.Drawing.Point(272, 158);
+            this.btn_show.Location = new System.Drawing.Point(272, 181);
             this.btn_show.Name = "btn_show";
             this.btn_show.Size = new System.Drawing.Size(229, 229);
             this.btn_show.TabIndex = 12;
@@ -245,9 +251,9 @@ namespace MessageClient
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(659, 63);
+            this.groupBox1.Location = new System.Drawing.Point(608, 86);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(187, 356);
+            this.groupBox1.Size = new System.Drawing.Size(238, 356);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "数据流";
@@ -257,7 +263,7 @@ namespace MessageClient
             this.textBox1.Location = new System.Drawing.Point(17, 25);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 317);
+            this.textBox1.Size = new System.Drawing.Size(213, 317);
             this.textBox1.TabIndex = 0;
             // 
             // radioButton1
@@ -355,7 +361,7 @@ namespace MessageClient
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(0, 57);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(163, 394);
+            this.groupBox2.Size = new System.Drawing.Size(163, 440);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "机械臂";
@@ -365,11 +371,22 @@ namespace MessageClient
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(65, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(65, 76);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(649, 418);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(699, 468);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 20);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "v1.0 provide by zeno";
             // 
             // MessageClient
             // 
@@ -378,9 +395,10 @@ namespace MessageClient
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(850, 451);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(850, 497);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lal_date);
             this.Controls.Add(this.lbl_usr);
@@ -394,10 +412,11 @@ namespace MessageClient
             this.Controls.Add(this.roundButton1);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MessageClient";
             this.Text = "客户端";
-            this.Load += new System.EventHandler(this.MessageClient_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MessageClient_FormClosing);
+            this.Load += new System.EventHandler(this.MessageClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -437,6 +456,7 @@ namespace MessageClient
         private RoundButton.RoundButton roundButton2;
         private RoundButton.RoundButton roundButton1;
         private PictureBox pictureBox1;
+        private Label label4;
     }
 
 }

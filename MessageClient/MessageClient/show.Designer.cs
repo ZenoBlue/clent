@@ -1,4 +1,9 @@
-﻿namespace MessageClient
+﻿/// <summary>
+/// 六轴机器人远程故障与监测系统v1.0
+/// ©韩山师范学院
+/// provide by 赵亮(Zeno)
+/// </summary>
+namespace MessageClient
 {
     partial class show
     {
@@ -57,6 +62,7 @@
             this.lbz = new System.Windows.Forms.Label();
             this.lby = new System.Windows.Forms.Label();
             this.textBox_showing = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_W)).BeginInit();
@@ -175,9 +181,9 @@
             this.lb_W.ForeColor = System.Drawing.Color.White;
             this.lb_W.Location = new System.Drawing.Point(181, 112);
             this.lb_W.Name = "lb_W";
-            this.lb_W.Size = new System.Drawing.Size(44, 31);
+            this.lb_W.Size = new System.Drawing.Size(106, 31);
             this.lb_W.TabIndex = 22;
-            this.lb_W.Text = "30";
+            this.lb_W.Text = "loading";
             // 
             // lb_S
             // 
@@ -187,9 +193,9 @@
             this.lb_S.ForeColor = System.Drawing.Color.White;
             this.lb_S.Location = new System.Drawing.Point(182, 202);
             this.lb_S.Name = "lb_S";
-            this.lb_S.Size = new System.Drawing.Size(44, 31);
+            this.lb_S.Size = new System.Drawing.Size(106, 31);
             this.lb_S.TabIndex = 22;
-            this.lb_S.Text = "20";
+            this.lb_S.Text = "loading";
             // 
             // lb_Y
             // 
@@ -199,16 +205,16 @@
             this.lb_Y.ForeColor = System.Drawing.Color.White;
             this.lb_Y.Location = new System.Drawing.Point(180, 297);
             this.lb_Y.Name = "lb_Y";
-            this.lb_Y.Size = new System.Drawing.Size(29, 31);
+            this.lb_Y.Size = new System.Drawing.Size(106, 31);
             this.lb_Y.TabIndex = 22;
-            this.lb_Y.Text = "5";
+            this.lb_Y.Text = "loading";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(292, 399);
+            this.label4.Location = new System.Drawing.Point(335, 399);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 31);
             this.label4.TabIndex = 22;
@@ -222,9 +228,9 @@
             this.lb_D.ForeColor = System.Drawing.Color.White;
             this.lb_D.Location = new System.Drawing.Point(184, 502);
             this.lb_D.Name = "lb_D";
-            this.lb_D.Size = new System.Drawing.Size(51, 31);
+            this.lb_D.Size = new System.Drawing.Size(106, 31);
             this.lb_D.TabIndex = 22;
-            this.lb_D.Text = "1.5";
+            this.lb_D.Text = "loading";
             // 
             // lb_Tx
             // 
@@ -268,7 +274,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(564, 531);
+            this.label1.Location = new System.Drawing.Point(564, 509);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 31);
             this.label1.TabIndex = 23;
@@ -280,7 +286,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(252, 112);
+            this.label2.Location = new System.Drawing.Point(283, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 31);
             this.label2.TabIndex = 22;
@@ -292,7 +298,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(257, 203);
+            this.label3.Location = new System.Drawing.Point(285, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 31);
             this.label3.TabIndex = 22;
@@ -304,7 +310,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(252, 297);
+            this.label5.Location = new System.Drawing.Point(283, 297);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 31);
             this.label5.TabIndex = 22;
@@ -316,7 +322,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(255, 502);
+            this.label6.Location = new System.Drawing.Point(289, 502);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 31);
             this.label6.TabIndex = 22;
@@ -334,9 +340,9 @@
             this.lbx.ForeColor = System.Drawing.Color.White;
             this.lbx.Location = new System.Drawing.Point(223, 368);
             this.lbx.Name = "lbx";
-            this.lbx.Size = new System.Drawing.Size(29, 31);
+            this.lbx.Size = new System.Drawing.Size(106, 31);
             this.lbx.TabIndex = 22;
-            this.lbx.Text = "1";
+            this.lbx.Text = "loading";
             // 
             // lbz
             // 
@@ -346,9 +352,9 @@
             this.lbz.ForeColor = System.Drawing.Color.White;
             this.lbz.Location = new System.Drawing.Point(226, 441);
             this.lbz.Name = "lbz";
-            this.lbz.Size = new System.Drawing.Size(29, 31);
+            this.lbz.Size = new System.Drawing.Size(106, 31);
             this.lbz.TabIndex = 22;
-            this.lbz.Text = "2";
+            this.lbz.Text = "loading";
             // 
             // lby
             // 
@@ -358,9 +364,9 @@
             this.lby.ForeColor = System.Drawing.Color.White;
             this.lby.Location = new System.Drawing.Point(223, 403);
             this.lby.Name = "lby";
-            this.lby.Size = new System.Drawing.Size(29, 31);
+            this.lby.Size = new System.Drawing.Size(106, 31);
             this.lby.TabIndex = 22;
-            this.lby.Text = "3";
+            this.lby.Text = "loading";
             // 
             // textBox_showing
             // 
@@ -371,12 +377,24 @@
             this.textBox_showing.Size = new System.Drawing.Size(228, 394);
             this.textBox_showing.TabIndex = 24;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(699, 540);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(147, 20);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "v1.0 provide by zeno";
+            // 
             // show
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
             this.ClientSize = new System.Drawing.Size(858, 566);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox_showing);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
@@ -403,6 +421,7 @@
             this.Controls.Add(this.lbl_usr);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "show";
             this.Text = "show";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.show_FormClosing);
@@ -448,5 +467,6 @@
         private System.Windows.Forms.Label lbz;
         private System.Windows.Forms.Label lby;
         private System.Windows.Forms.TextBox textBox_showing;
+        private System.Windows.Forms.Label label7;
     }
 }

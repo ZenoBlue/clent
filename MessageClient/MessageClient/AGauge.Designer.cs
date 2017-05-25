@@ -1,3 +1,8 @@
+﻿/// <summary>
+/// 六轴机器人远程故障与监测系统v1.0
+/// ©韩山师范学院
+/// provide by 赵亮(Zeno)
+/// </summary>
 namespace AGaugeApp
 {
     partial class AGauge

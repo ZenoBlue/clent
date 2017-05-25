@@ -1,4 +1,9 @@
-﻿namespace MessageClient
+﻿/// <summary>
+/// 六轴机器人远程故障与监测系统v1.0
+/// ©韩山师范学院
+/// provide by 赵亮(Zeno)
+/// </summary>
+namespace MessageClient
 {
     partial class login
     {
@@ -39,6 +44,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -47,18 +53,20 @@
             // login_name
             // 
             this.login_name.BackColor = System.Drawing.SystemColors.Menu;
+            this.login_name.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.login_name.Location = new System.Drawing.Point(311, 73);
             this.login_name.Name = "login_name";
-            this.login_name.Size = new System.Drawing.Size(148, 21);
+            this.login_name.Size = new System.Drawing.Size(148, 26);
             this.login_name.TabIndex = 1;
             // 
             // login_pwd
             // 
             this.login_pwd.BackColor = System.Drawing.SystemColors.Menu;
+            this.login_pwd.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.login_pwd.Location = new System.Drawing.Point(311, 124);
             this.login_pwd.Name = "login_pwd";
             this.login_pwd.PasswordChar = '*';
-            this.login_pwd.Size = new System.Drawing.Size(148, 21);
+            this.login_pwd.Size = new System.Drawing.Size(148, 26);
             this.login_pwd.TabIndex = 2;
             // 
             // button1
@@ -154,12 +162,24 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "©Copyright韩山师范学院";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(375, 220);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 20);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "v1.0 provide by zeno";
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(226)))));
-            this.ClientSize = new System.Drawing.Size(524, 224);
+            this.ClientSize = new System.Drawing.Size(524, 241);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -172,6 +192,7 @@
             this.Controls.Add(this.login_name);
             this.ForeColor = System.Drawing.SystemColors.InfoText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "login";
@@ -197,5 +218,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
